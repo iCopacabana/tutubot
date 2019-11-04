@@ -29,7 +29,7 @@ for(const file of readdirSync('./eventos')) {
         delete require.cache[require.resolve(`./eventos/${file}`)];
     }
 }
-client.login(client.config.token)
+client.login(process.env.BOT_TOKEN)
     .then(() => {
         console.log(`Estoy listo, soy ${client.user.tag}`);
     })
